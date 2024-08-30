@@ -20,6 +20,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use('/', async(req, res)=>{
+    res.send({message: "Hey! there...."})
+})
 app.use('/api/auth', authRoutes);
 app.use('/api/applications', applicationRoutes);
 app.use('/api/chat', chatRoutes);
